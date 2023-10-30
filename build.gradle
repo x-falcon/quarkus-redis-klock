@@ -1,0 +1,36 @@
+allprojects {
+    group 'io.quarkiverse.lock'
+    version '0.0.1'
+}
+
+subprojects {
+
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+
+    dependencies {
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    compileJava {
+        options.encoding = 'UTF-8'
+        options.compilerArgs << '-parameters'
+    }
+
+    compileTestJava {
+        options.encoding = 'UTF-8'
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    test {
+        systemProperty "java.util.logging.manager", "org.jboss.logmanager.LogManager"
+    }
+}

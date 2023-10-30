@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+        id "${quarkusPluginId}.extension" version "${quarkusPluginVersion}"
+    }
+}
+
+include ':deployment' , ':runtime'
+
+rootProject.name = 'quarkus-distributed-redisson-lock'

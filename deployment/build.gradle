@@ -1,0 +1,15 @@
+dependencies {
+    implementation project(':runtime')
+    implementation 'io.quarkus:quarkus-arc-deployment'
+    implementation 'io.quarkus:quarkus-netty-deployment'
+    implementation 'org.redisson:redisson-quarkus-30-deployment:3.24.3'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = "${rootDir.name}-deployment"
+            from components.java
+        }
+    }
+}

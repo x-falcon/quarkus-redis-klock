@@ -1,0 +1,17 @@
+plugins {
+    id 'io.quarkus.extension'
+}
+
+dependencies {
+    implementation "io.quarkus:quarkus-arc:${quarkusPlatformVersion}"
+    implementation 'org.redisson:redisson-quarkus-30:3.24.3'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = "${rootDir.name}"
+            from components.java
+        }
+    }
+}

@@ -1,0 +1,12 @@
+---
+name: Quarkus Distributed Lock Extension By Redisson
+description: Quarkus Distributed Lock Extension By Redisson
+metadata:
+  keywords:
+    - "lock"
+    - "distributed"
+    - "redisson"
+  guide: ""
+  categories:
+    - "lock"
+  status: "preview"
