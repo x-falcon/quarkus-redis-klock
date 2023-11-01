@@ -4,15 +4,13 @@ import io.quarkus.arc.deployment.AdditionalBeanBuildItem;
 import io.quarkus.arc.deployment.AnnotationsTransformerBuildItem;
 import io.quarkus.deployment.annotations.BuildProducer;
 import io.quarkus.deployment.annotations.BuildStep;
-
 import io.quarkus.deployment.annotations.ExecutionTime;
 import io.quarkus.deployment.annotations.Record;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
 import org.quarkus.lock.redisson.LockConfig;
 import org.quarkus.lock.redisson.LockInterceptor;
-import org.quarkus.lock.redisson.LockRecorder;
 import org.quarkus.lock.redisson.LockManagerDefinition;
-import org.quarkus.lock.redisson.lock.LockManager;
+import org.quarkus.lock.redisson.LockRecorder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
